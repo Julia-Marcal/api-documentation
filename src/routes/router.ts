@@ -1,10 +1,10 @@
 import { Router } from "express";
-const controller = require('../controllers/basicController')
-
+const Hellocontroller = require('../controllers/basicController')
+const AgentCreateController = require('../controllers/agentController')
 
 const router = Router()
 
-router.get('/', controller.hello);
-router.post('/', controller.store);
+router.get('/', Hellocontroller.hello);
+router.post('/', AgentCreateController.create);
 
 module.exports = router;
