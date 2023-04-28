@@ -15,5 +15,5 @@ model Agents {
   name  String
   real_name String
   age Int
-  Country String
+  country String
 }
