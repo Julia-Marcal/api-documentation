@@ -4,12 +4,12 @@ import {agentValidation} from '../validation/validation'
 import { prisma } from '../services/prisma'
 
 /**
- * Create a new agent to the postgres db
+ * Create agent on the db
  *
  * @swagger
  * /agents:
  *  post:
- *    description: Insert a new agent to the db.
+ *    description: Create a new agent on the db.
  *    parameters:
  *      - name: name
  *        in: body
