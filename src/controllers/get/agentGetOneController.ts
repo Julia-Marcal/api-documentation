@@ -1,12 +1,12 @@
 import { Request, Response } from 'express'
-import { prisma } from '../services/prisma'
+import { prisma } from '../../services/prisma'
 
 /**
  * Search an agent by the id
  *
  * @swagger
  * /agents:
- *  post:
+ *  get:
  *    description: Search an agent by the id.
  *    parameters:
  *      - name: id

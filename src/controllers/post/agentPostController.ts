@@ -1,7 +1,7 @@
-import { createAgent } from '../repositories/agentCreate'
+import { createAgent } from '../../repositories/agentCreate'
 import { Request, Response } from 'express'
-import {agentValidation} from '../validation/validation'
-import { prisma } from '../services/prisma'
+import {agentValidation} from '../../validation/validation'
+import { prisma } from '../../services/prisma'
 
 /**
  * Create agent on the db
