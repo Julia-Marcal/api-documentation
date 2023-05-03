@@ -3,8 +3,8 @@ const Hellocontroller = require('../controllers/get/basicController')
 
 const AgentCreateController = require('../controllers/post/agentPostController')
 
-const AgentViewAllController = require('../controllers/get/agentViewAllController')
-const ViewAgentById = require('../controllers/get/agentViewOneController')
+const AgentViewAllController = require('../controllers/get/agentGetAllController')
+const ViewAgentById = require('../controllers/get/agentGetOneController')
 
 const DeleteById = require('../controllers/delete/agentDeleteController')
 const DeleteAllAgents = require('../controllers/delete/agentDeleteAllControler')
