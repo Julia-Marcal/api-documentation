@@ -9,6 +9,8 @@ const ViewAgentById = require('../controllers/get/agentGetOneController')
 const DeleteById = require('../controllers/delete/agentDeleteController')
 const DeleteAllAgents = require('../controllers/delete/agentDeleteAllControler')
 
+const AgentUpdate = require('../controllers/update/agentUpdateController')
+
 const router = Router()
 
 router.get('/HelloWorld', Hellocontroller.hello);
@@ -19,5 +21,7 @@ router.post('/', AgentCreateController.create);
 
 router.delete('/:id', DeleteById.deleteById)
 router.delete('/', DeleteAllAgents.deleteAll)
+
+router.patch('/:id', AgentUpdate.updateName)
 
 module.exports = router;
