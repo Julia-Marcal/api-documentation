@@ -1,6 +1,6 @@
 import { createAgent } from '../../repositories/agentCreate'
 import { Request, Response } from 'express'
-import {agentValidation} from '../../validation/validation'
+import {agentValidation} from '../../validation/validationAgent'
 import { prisma } from '../../services/prisma'
 
 /**
