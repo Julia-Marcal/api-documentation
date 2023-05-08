@@ -22,12 +22,4 @@ export const CheckToken = (req: TokenRequest, res: Response, next: NextFunction)
   }
 }
 
-export const VerifyToken = (req: TokenRequest, res: Response) =>{
-  jwt.verify(String(req.token), my_secret, function(e, data){
-    if(e) {
-      res.sendStatus(400);
-    } else{
-      res.json(data)
-    }
-  })
-}
+
