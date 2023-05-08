@@ -23,7 +23,7 @@ router.get('/:id', ViewAgentById.findById)
 
 router.post('/', AgentCreateController.create);
 
-router.delete('/:id', DeleteById.deleteById)
+router.delete('/:id', LoginRequired.CheckToken ,DeleteById.deleteById)
 router.delete('/', DeleteAllAgents.deleteAll)
 
 router.patch('/:id', AgentUpdate.updateName)
