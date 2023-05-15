@@ -24,7 +24,7 @@ const options = {
     url: '<http://localhost:4000>',
     description: 'Local server'
   }],
-  apis: ['src/controllers/*.ts']
+  apis: ['src/controllers/*/*.ts']
 }
 
 const swaggerSpec = swaggerJsdoc(options)
