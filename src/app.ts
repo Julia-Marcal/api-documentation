@@ -5,6 +5,8 @@ import swaggerJsdoc from 'swagger-jsdoc'
 import swaggerUi from 'swagger-ui-express'
 
 const router = require('./routes/router')
+const path = require('path');
+
 
 const app = express()
 
@@ -34,6 +36,9 @@ app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
 app.use(express.json())
 
 app.use(cors())
+
+app.set('views', path.resolve(__dirname, 'views'));
+app.set('view engine', 'html');
 
 app.use(router)
 
