@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-
+import path from 'path';
 /**
  * Hello World message
  *
@@ -16,11 +16,14 @@ import { Request, Response } from 'express';
  *        description: Bad request
  */
 
-export const hello = (req: Request,res: Response) =>{
-    try{
-      res.send('Hello world!')
-    }
-    catch(e){
-      return res.status(400).json('Something went wrong')
-    }
-}
+
+
+export const hello = (req: Request, res: Response) => {
+  try {
+    const indexPath = path.resolve(__dirname, '../', '../', 'views', 'index.html');
+    res.sendFile(indexPath)
+  } catch (e) {
+    return res.status(400).json('Something went wrong');
+  }
+};
+
