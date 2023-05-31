@@ -1,5 +1,4 @@
 import { Router } from "express";
-const Hellocontroller = require('../controllers/get/basicController')
 
 const AgentCreateController = require('../controllers/post/agentPostController')
 
@@ -16,7 +15,6 @@ const LoginRequired = require('../middlewares/loginRequired')
 
 const router = Router()
 
-router.get('/HelloWorld', Hellocontroller.hello);
 router.get('/', AgentViewAllController.viewAllAgents)
 router.get('/:id', ViewAgentById.findById)
 
