@@ -11,7 +11,6 @@ const DeleteAllAgents = require('../controllers/delete/agentDeleteAllControler')
 
 const AgentUpdate = require('../controllers/update/agentUpdateController')
 
-//Users
 const UserCreate = require('../controllers/register/UserPostController')
 const LoginRequired = require('../middlewares/loginRequired')
 
@@ -28,7 +27,7 @@ router.delete('/', DeleteAllAgents.deleteAll)
 
 router.patch('/:id', AgentUpdate.updateName)
 
-//Users
 router.post('/users', UserCreate.create)
+
 
 module.exports = router;

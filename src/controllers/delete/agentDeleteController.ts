@@ -29,7 +29,7 @@ export const deleteById = async(req: Request, res: Response) =>{
       }
     })
     await prisma.$disconnect
-    res.status(200).send(deleteAgent).send('was deleted from the database')
+    res.status(200).send('was deleted from the database')
   }catch(e){
     res.status(400).send(e)
   }

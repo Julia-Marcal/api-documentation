@@ -38,6 +38,7 @@ app.use(express.json())
 app.use(cors())
 
 app.set('views', path.resolve(__dirname, 'views'));
+app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
 app.use(router)
