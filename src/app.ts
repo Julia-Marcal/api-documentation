@@ -7,7 +7,6 @@ import swaggerUi from 'swagger-ui-express'
 const router = require('./routes/router')
 const path = require('path');
 
-
 const app = express()
 
 
