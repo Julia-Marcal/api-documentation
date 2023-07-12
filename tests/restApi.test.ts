@@ -13,3 +13,23 @@ describe('GetById', () => {
     })
   })
 })
+
+describe('GetAllUsers', () => {
+  it('should return all agents', async () => {
+    const res = await request(app).get('/')
+    expect(res.body).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          name: expect.stringContaining('Brimstone')
+        })
+      ])
+    ),
+    expect(res.body).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          name: expect.stringContaining('Sage')
+        })
+      ])
+    )
+  })
+})
