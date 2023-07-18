@@ -12,6 +12,9 @@ const my_secret = String(process.env.SECRET)
 
 export const create = async(req: Request, res: Response) => {
   try{
+    if(!req.body){
+      throw new Error('Cannot create user without req.body')
+    }
     await userValidation.parse(req.body)
     const user = await createUser(req.body);
     const token = jwt.sign({user}, my_secret, {expiresIn: '1y'})
@@ -21,5 +24,4 @@ export const create = async(req: Request, res: Response) => {
     res.status(400).send(e)
   }
 }
-
 
